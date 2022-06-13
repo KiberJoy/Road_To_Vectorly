@@ -1,0 +1,26 @@
+<div
+  *ngIf="sortType$ | async as sortType"
+  [class.active]="sortType === column.type"
+  class="table-header"
+  (click)="sort(column.type)"
+>
+  <div class="table-header__table-sorting" *ngIf="sortOrder$ | async as sortOrder">
+    <div
+      class="table-header__table-sorting-vector-up"
+      [class.active]="column.type === sortType && sortOrder === -1"
+    >
+    </div>
+
+    <div
+      class="table-header__table-sorting-vector-down"
+      [class.active]="column.type === sortType && sortOrder === 1"
+    >
+    </div>
+  </div>
+
+  <div class="table-header__table-title">{{column.value}} </div>
+  <img
+    *ngIf="column.value.toLowerCase() === 'status'"
+    src="../../../../assets/description.svg" alt=""
+  >
+</div>

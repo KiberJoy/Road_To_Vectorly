@@ -1,0 +1,59 @@
+.status-green {
+  @include app-font__PT($app_color_212132, 16px, normal, 400, 20px);
+  align-items: center;
+  background-color: $app-color-f2f7da;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  font-feature-settings: 'liga' off;
+  gap: 16px;
+  padding: 6px 16px;
+  width: 122px;
+  &::before {
+    background-color: $app-color-c5de5d;
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.status-red {
+  @include app-font__PT($app_color_212132, 16px, normal, 400, 20px);
+  align-items: center;
+  background-color: $app-color-ffe6eb;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  font-feature-settings: 'liga' off;
+  gap: 16px;
+  padding: 6px 16px;
+  width: 124px;
+  &::before {
+    background-color: $app-color-ff525c;
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.status-black {
+  @include app-font__PT($app_color_212132, 16px, normal, 400, 20px);
+  align-items: center;
+  background-color: rgba($app_color_212132, 0.1);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  font-feature-settings: 'liga' off;
+  gap: 16px;
+  padding: 6px 16px;
+  width: 134px;
+  &::before {
+    background-color: $app_color_212132;
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    width: 16px;
+  }
+}

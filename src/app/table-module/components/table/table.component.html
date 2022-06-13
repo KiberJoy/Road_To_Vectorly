@@ -1,0 +1,23 @@
+<div class="app-table">
+  <div class="app-table__name">{{tableTopicName}}</div>
+
+  <div class="app-table__wrapper">
+    <ng-container *ngIf="table$ | async as table">
+      <ng-container *ngFor="let tableHeadRow of table.head.rows">
+        <app-table-header-row
+          [tableRow]="tableHeadRow"
+        >
+        </app-table-header-row>
+      </ng-container>
+
+      <ng-container *ngFor="let tableBodyRow of table.body.rows">
+        <app-table-row
+          [tableRow]="tableBodyRow"
+        >
+        </app-table-row>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <app-pagination></app-pagination>
+</div>

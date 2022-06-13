@@ -1,0 +1,84 @@
+app-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+
+  & > #select {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    & > select {
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      @include app-font__PT($app_color_212132, 16px, normal, 400, 20px);
+      appearance:none;
+      background-image: url(../../assets/triangle_down.svg);
+      background-position: 95% 50%;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      border: none;
+      border-bottom: 2px solid $app-color-7397ab;
+      cursor: pointer;
+      height: 40px;
+      letter-spacing: 0.01em;
+      outline: none;
+      width: 64px;
+      font-feature-settings: 'liga' off;
+      padding-left: 5px; //добавил не по макету
+    }
+    & > div {
+      @include app-font__PT(rgba($app_color_212132, 0.6), 16px, normal, 400, 20px);
+      text-align: center;
+      letter-spacing: 0.01em;
+      font-feature-settings: 'liga' off;
+    }
+  }
+
+  & > #pagination {
+    display: flex;
+    column-gap: 8px;
+    & > button {
+      align-items: center;
+      background-color: $app-color-e3eaee;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      height: 32px;
+      justify-content: center;
+      width: 32px;
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      & > img {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    & > ul {
+      column-gap: 8px;
+      display: flex;
+      & > li {
+        @include app-font__PT($app_color_3e5f72, 16px, normal, 400, 20px);
+        border-radius: 2px;
+        cursor: pointer;
+        font-feature-settings: 'liga' off;
+        height: 32px;
+        letter-spacing: 0.01em;
+        list-style-type: none;
+        padding: 6px 0;
+        text-align: center;
+        width: 32px;
+        &:hover {
+          background-color: $app-color-e3eaee;
+          color: $app-color-212132;
+        }
+        &.active {
+          background-color: $app-color-e3eaee;
+          color: $app-color-212132;
+        }
+      }
+    }
+  }
+}

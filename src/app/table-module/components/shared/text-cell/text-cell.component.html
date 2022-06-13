@@ -1,0 +1,9 @@
+<div
+  [ngClass]="{
+    'status-green': columnValue === 'On track',
+    'status-black': columnValue === 'Need help',
+    'status-red': columnValue === 'Off track'
+  }"
+>
+  {{columnValue}}
+</div>

@@ -1,0 +1,31 @@
+app-table-cell {
+  background-color: $app-color_ffffff;
+  padding: 12px 24px;
+  border-top: 2px solid $app-color_f1f5f7;
+  border-right: 2px solid $app-color_f1f5f7;
+
+  &:first-of-type {
+    flex-basis: 435px;
+  }
+
+  &:nth-of-type(2) {
+    flex-basis: 230px;
+    padding: 12px 16px;
+  }
+
+  &:last-of-type {
+    flex-grow: 1;
+    padding: 12px 5px;
+    border-right: 0;
+    border-right: none;
+  }
+
+  &.app-header-cell {
+    border-top: 2px solid $app-color_ffffff;
+    border-right: 2px solid $app-color_ffffff;
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
+

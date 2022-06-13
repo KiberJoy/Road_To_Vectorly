@@ -1,0 +1,21 @@
+<ng-container
+  [ngSwitch]="column.type != undefined"
+>
+  <app-image-cell
+    *ngSwitchCase="column.type === 'flag'"
+    [columnValue]="column.value"
+  >
+  </app-image-cell>
+
+  <app-text-cell
+    *ngSwitchCase="column.type === 'status'"
+    [columnValue]="column.value"
+  >
+  </app-text-cell>
+
+  <div
+    *ngSwitchDefault
+  >
+    {{column.value}}
+  </div>
+</ng-container>

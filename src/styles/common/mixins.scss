@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin app-font__PT($color, $size, $style, $weight, $line-height) {
+  color: $color;
+  font-family: 'PT Sans', sans-serif;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $line-height;
+}

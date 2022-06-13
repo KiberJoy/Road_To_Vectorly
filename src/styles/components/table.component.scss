@@ -1,0 +1,22 @@
+.app-table {
+  background-color: $app-color_f1f5f7;
+  box-shadow: inset 2px 0px 0px $app-color_ace5ca;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding: 24px;
+  width: 811px;
+
+  & > .app-table__name {
+    @include app-font__PT($app_color_212132, 20px, normal, 400, 24px);
+    font-feature-settings: 'ss01' on;
+    margin-bottom: 24px;
+    padding: 4px 0;
+  }
+
+  & > .app-table__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

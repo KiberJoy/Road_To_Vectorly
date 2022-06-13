@@ -1,0 +1,18 @@
+app-image-cell {
+  align-items: flex-start;
+  column-gap: 16px;
+  display: flex;
+  word-break: break-word;
+  & > .image-box {
+    padding-top: 6px;
+    & > img {
+      height: 16px;
+      width: 16px;
+    }
+  }
+  & > a {
+    @include app-font__PT($app-color_3e5f72, 16px, normal, 400, 24px);
+    letter-spacing: 0.01em;
+    text-decoration: underline;
+  }
+}

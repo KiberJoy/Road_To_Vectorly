@@ -1,0 +1,41 @@
+<div id="select">
+  <select
+    (ngModelChange)="onLimitChange($event)"
+    [ngModel]='itemsLimit$ | async'
+  >
+    <option
+      *ngFor="let option of itemsLimits"
+      [ngValue]="option"
+    >
+      {{option}}
+    </option>
+  </select>
+  <div>Items per page</div>
+</div>
+
+<div id="pagination">
+  <button
+    (click)="onPageChange(pageIndex-1)"
+    [disabled]="!(pageIndex)"
+    [ngClass]="{'disabled': !(pageIndex)}"
+  >
+    <img src="../../../../assets/arrow_left.svg" alt="">
+  </button>
+  <ul id="pagination-list">
+    <li
+      *ngFor="let page of pages; index as i"
+      (click)="onPageChange(i)"
+      [ngClass]="{'active': pageIndex === i}"
+    >
+      {{i+1}}
+    </li>
+  </ul>
+  <button
+    (click)="onPageChange(pageIndex+1)"
+    [disabled]="!(pages.length - (pageIndex+1))"
+    [ngClass]="{'disabled': !(pages.length - (pageIndex+1))}"
+  >
+    <img src="../../../../assets/arrow_right.svg" alt="">
+  </button>
+</div>
+

@@ -1,0 +1,70 @@
+app-table-header-cell {
+  background-color: $app-color_ffffff;
+  padding: 12px 24px;
+  border-top: 2px solid $app-color_ffffff;
+  border-right: 2px solid $app-color_ffffff;
+
+
+  &:first-of-type {
+    flex-basis: 435px;
+  }
+
+  &:nth-of-type(2) {
+    flex-basis: 230px;
+    padding: 12px 16px;
+  }
+
+  &:last-of-type {
+    flex-grow: 1;
+    padding: 12px 5px;
+    border-right: 0;
+    border-right: none;
+  }
+
+  & > .table-header {
+    display: inline-flex;
+    column-gap: 9px;
+    cursor: pointer;
+    align-items: center;
+    padding: 6px 16px;
+
+    &.active {
+      background-color: $app-color-f1f5f7;
+      border-radius: 100px;
+      & > .table-header__table-title {
+        color: $app-color-212132;
+      }
+    }
+
+    & > .table-header__table-sorting {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5px;
+      & > .table-header__table-sorting-vector-up {
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top: 0;
+        border-bottom: 6px solid $app-color-7397ab;
+        &.active {
+          border-bottom: 6px solid $app-color-212132;
+        }
+      }
+      & > .table-header__table-sorting-vector-down {
+        border: 5px solid transparent;
+        border-bottom: 0;
+        border-top: 6px solid $app-color-7397ab;
+        &.active {
+          border-top: 6px solid $app-color-212132;
+        }
+      }
+    }
+
+    & > .table-header__table-title {
+      @include app-font__PT($app_color_3e5f72, 16px, normal, 400, 20px);
+      letter-spacing: 0.01em;
+      font-feature-settings: 'liga' off;
+    }
+  }
+}
+
